@@ -1,0 +1,104 @@
+{
+  "root": true,
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier/@typescript-eslint",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:import/typescript"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "import-helpers",
+    "@typescript-eslint",
+    "import",
+    "jsx-a11y",
+    "react-hooks"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "implicit-arrow-linebreak": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "global-require": "off",
+    "no-case-declarations": "off",
+    "no-underscore-dangle": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always", // new line between groups
+        "groups": [
+          "/^react/",
+          "module",
+          "/^functions/",
+          "/^utils/",
+          "/^components/",
+          "/^store/",
+          "/^pages/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "import/no-unresolved": "error",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/jsx-curly-newline": "off",
+    "no-plusplus": "off",
+    "consistent-return": "off",
+    "prefer-destructuring": "off",
+    "no-shadow": "off",
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "ignore",
+        "prop": "ignore"
+      }
+    ],
+    "import/no-cycle": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-console": "off",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "settings": {
+    "import/resolver": { "node": { "paths": ["src"] } }
+  }
+}
